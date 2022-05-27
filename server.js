@@ -8,7 +8,7 @@ app.use(express.json());
 
 const rooms = new Map();
 
-app.get((req, res) => {
+app.get('/rooms/:id', (req, res) => {
   const { id: roomId } = req.params;
   const obj = rooms.has(roomId)
     ? {
@@ -19,7 +19,7 @@ app.get((req, res) => {
   res.json(obj);
 });
 
-app.post((req, res) => {
+app.post('/rooms', (req, res) => {
   const { roomId, userName } = req.body;
   if (!rooms.has(roomId)) {
     rooms.set(
@@ -62,7 +62,7 @@ io.on('connection', (socket) => {
   console.log('user connected', socket.id);
 });
 
-server.listen((err) => {
+server.listen(8888, (err) => {
   if (err) {
     throw Error(err);
   }

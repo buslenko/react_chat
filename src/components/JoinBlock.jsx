@@ -1,5 +1,5 @@
-import React from "/work/chat-work/node_modules/@types/react/index";
-import axios from "/work/chat-work/node_modules/axios/index";
+import React from 'react';
+import axios from 'axios';
 
 function JoinBlock({ onLogin }) {
   const [roomId, setRoomId] = React.useState('');

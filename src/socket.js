@@ -1,4 +1,4 @@
-import io from "/work/chat-work/node_modules/socket.io-client/build/esm/index";
+import io from 'socket.io-client';
 const socket = io();
 
 export default socket;

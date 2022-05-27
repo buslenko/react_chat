@@ -1,5 +1,5 @@
-import React from  "/work/chat-work/node_modules/@types/react/index";
-import socket from "/work/chat-work/src/socket";
+import React from 'react';
+import socket from '../socket';
 
 function Chat({ users, messages, userName, roomId, onAddMessage }) {
   const [messageValue, setMessageValue] = React.useState('');
