@@ -1,11 +1,11 @@
-import React from 'react';
-import axios from 'axios';
+import React from "/work/chat-work/node_modules/@types/react/index";
+import axios from "/work/chat-work/node_modules/axios/index";
 
-import socket from './socket';
+import socket from "/work/chat-work/src/socket";
 
-import reducer from './reducer';
-import JoinBlock from './components/JoinBlock';
-import Chat from './components/Chat';
+import reducer from "/work/chat-work/src/reducer";
+import JoinBlock from "/work/chat-work/src/components/JoinBlock";
+import Chat from "/work/chat-work/src/components/Chat";
 
 function App() {
   const [state, dispatch] = React.useReducer(reducer, {
